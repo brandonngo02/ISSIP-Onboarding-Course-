@@ -43,25 +43,193 @@
 <h4>Section C: Participation - Ten Learning Items</h4>
 <ul><li>Participation information includes reminders and resources to help ISSIP participants engage effectively with the community. </li></ul>
   </div>
-
+  </div>
 
   <!-- Module 1 -->
   <div class="page" id="module1">
     <div class="section">
-      <h2>📘 Module 1: Introduction to Service Innovation</h2>
+      <h2>📘 Section A: Concepts</h2>
       <img src="ethan-hu-NRTptNBkLLw-unsplash.jpg" alt="Ethan" />
       <p><strong>Time:</strong> 20 minutes</p>
       <p><strong>Learning Goals:</strong></p>
       <ul>
-        <li>Understand the central role of service in business and society.</li>
-        <li>Frame AI's impact on service systems.</li>
-        <li>Introduce science, logic, and architecture lenses.</li>
+        <li>Understand the evolving role of service in business and society.</li>
+        <li>Explore how AI reshapes service through automation and augmentation.</li>
+        <li>Introduce the three lenses of service: science, logic, and architecture.</li>
       </ul>
-      <h3>Reflection:</h3>
-      <p>“List 3 ways you receive or deliver a service daily. How might AI improve or complicate those interactions?”</p>
+  
+      <h3>🔍 Concepts Explored</h3>
+      <div class="concept-box">
+        <button class="toggle-btn" onclick="toggleConcept(this)">▶️ What is Service?</button>
+        <div class="concept-content">
+        <ul>
+          <li>Service is defined as the application of resources (e.g., knowledge) for the benefit of another.</li>
+          <li> It is fundamental to social and economic exchange and lies at the core of value co-creation, which aims to make every situation more beneficial and win-win for everyone involved.</li>
+          <li> Service underlies social and economic development, and the wealth of people, businesses, and nations.</li>
+          <li>The service research community aims to understand daily interactions to improve outcomes for people, businesses, and governments, recognizing that great interactions create more value for all stakeholders.</li>
+        </ul> 
+      </div>
+    </div>    
+    <div class="concept-box">
+      <button class="toggle-btn" onclick="toggleConcept(this)">▶️ Service Innovation</button>
+      <div class="concept-content">
+      <ul>
+        <li>Service innovation involves finding new ways for people to apply knowledge for mutually beneficial interactions that improve the quality of life and well-being. </li>
+        <li>It requires the integration of advanced technologies (like AI) for amplifying capabilities, innovative business models for scaling benefits, and effective institutional arrangements for mitigating harms.</li>
+        <li>A key goal of service innovation is to foster improvements in interactions and drive positive change within business and society, while upholding human values (freedom, justice, inclusion), and ensuring sustainability and resilience.</li>
+        <li>Service innovation also involves rebundling resources to create new resources.
+        </li>
+      </ul> 
+    </div>
+  </div>  
+  <div class="concept-box">
+    <button class="toggle-btn" onclick="toggleConcept(this)">▶️ 🧠 Activity: Service Around You</button>
+    <div class="concept-content">
+      <p>Look around your daily life—your morning routine, a recent purchase, or a conversation. Identify <strong>2 examples of service</strong> you received or provided. What knowledge or resource was applied? Write them down in your notes or phone.</p>
+    </div>
+  </div>   
+  <div class="concept-box">
+    <button class="toggle-btn" onclick="toggleConcept(this)">▶️ AI & Digital Service</button>
+    <div class="concept-content">
+    <ul>
+      <li>AI refers to technologies that can act intelligently (like people in some ways) in real-world contexts, often by learning from data or being programmed.</li>
+      <li>AI is rapidly transforming service delivery and consumption, with AI-driven tools and online platforms becoming increasingly prevalent.</li>
+      <li>Technology-mediated service interactions, facilitated by digital platforms, are being reshaped by AI, leading to new opportunities and challenges.</li>
+      <li>Online platforms are defined as a digital service or technology-enabled service that enables interactions between two or more distinct but interdependent sets of users (whether firms or individuals) who interact through the service via the Internet.</li>
+    </ul> 
+  </div>
+</div>  
+<div class="concept-box">
+  <button class="toggle-btn" onclick="toggleConcept(this)">▶️ Service Practice</button>
+  <div class="concept-content">
+  <ul>
+    <li>Service practice involves the responsible application of knowledge and skills to help others, coupled with a commitment to continuous learning (upskilling).</li>
+    <li>It emphasizes value co-creation, collaboration, and ethical considerations in service interactions, all of which are becoming more critical in the AI era.  </li>
+    <li>Service professionals must adapt to the evolving service landscape by expanding their skill sets and embracing AI to enhance their capabilities.  </li>
+    <li>The International Society of Service Innovation Professionals (ISSIP) supports give-get-grow community engagement at all stages of career development, from student to diverse career roles to retired, to support service innovation.  </li>
+  </ul> 
+</div>
+</div> 
+<div class="concept-box">
+  <button class="toggle-btn" onclick="toggleConcept(this)">▶️ 🔧 Activity: Build a Service Map</button>
+  <div class="concept-content">
+    <p>Use this space to sketch your service map! Draw and drag lines, boxes, arrows, and symbols to show how a service works and where AI or humans are involved. Refresh the page to reset.</p>
+    <div id="toolbox" style="margin-bottom: 1rem;">
+      <img src="https://img.icons8.com/ios-filled/50/user.png" draggable="true" class="symbol" data-label="Human" title="Human">
+      <img src="https://img.icons8.com/ios-filled/50/artificial-intelligence.png" draggable="true" class="symbol" data-label="AI" title="AI">
+      <img src="https://img.icons8.com/ios-filled/50/cloud-network.png" draggable="true" class="symbol" data-label="Platform" title="Platform">
+    </div>
+    
+    <canvas id="whiteboard" width="600" height="400" style="border:1px solid #ccc; background: #fff;"></canvas>
+    <br>
+    <button onclick="clearCanvas()" style="margin-top: 10px; padding: 0.5rem 1rem;">🧹 Clear</button>
+    
+    <script>
+      const canvas = document.getElementById('whiteboard');
+      const ctx = canvas.getContext('2d');
+      let drawing = false;
+    
+      canvas.addEventListener('mousedown', (e) => {
+        drawing = true;
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+      });
+    
+      canvas.addEventListener('mousemove', (e) => {
+        if (drawing) {
+          ctx.lineTo(e.offsetX, e.offsetY);
+          ctx.strokeStyle = '#1f2937';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+      });
+    
+      canvas.addEventListener('mouseup', () => { drawing = false; });
+      canvas.addEventListener('mouseleave', () => { drawing = false; });
+    
+      function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Redraw grid or reset state if needed
+      }
+    
+      // Symbol drag-drop logic
+      const symbols = document.querySelectorAll('.symbol');
+      let draggedImg = null;
+    
+      symbols.forEach(symbol => {
+        symbol.addEventListener('dragstart', (e) => {
+          draggedImg = new Image();
+          draggedImg.src = e.target.src;
+          draggedImg.width = 30;
+          draggedImg.height = 30;
+        });
+      });
+    
+      canvas.addEventListener('dragover', (e) => {
+        e.preventDefault(); // Allow drop
+      });
+    
+      canvas.addEventListener('drop', (e) => {
+        if (draggedImg) {
+          const rect = canvas.getBoundingClientRect();
+          const x = e.clientX - rect.left - 15;
+          const y = e.clientY - rect.top - 15;
+          ctx.drawImage(draggedImg, x, y, 30, 30);
+        }
+      });
+    </script>
+  </div>
+</div>    
+<div class="concept-box">
+  <button class="toggle-btn" onclick="toggleConcept(this)">▶️ Service Practice</button>
+  <div class="concept-content">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul> 
+</div>
+</div> 
+<div class="concept-box">
+  <button class="toggle-btn" onclick="toggleConcept(this)">▶️ Service Practice</button>
+  <div class="concept-content">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul> 
+</div>
+</div> 
+      <h4>5. Service Research</h4>
+      <p>This global field studies real-world interactions to improve service experiences. It's collaborative, transdisciplinary, and focuses on making change beneficial for all stakeholders.</p>
+  
+      <h4>6. Service Education</h4>
+      <p>Service education develops critical thinkers and doers ready for AI-enhanced systems. It fosters future-ready professionals who can evaluate and challenge models of the world.</p>
+  
+      <h4>7. AI’s Impact on Service</h4>
+      <p>AI transforms service through automation (efficiency) and augmentation (enhancing human ability). Ethical design and trust are crucial to this transformation.</p>
+  
+      <h4>8. Automation vs. Augmentation</h4>
+      <p>AI streamlines routine tasks but also empowers people to solve bigger problems. Together, they improve scalability, quality, and the future of work.</p>
+  
+      <h4>9. Role of Data</h4>
+      <p>Data fuels AI. Used ethically, it drives smarter decisions and proactive service. But it also raises concerns about privacy, bias, and transparency.</p>
+  
+      <h4>10. The Future of Service</h4>
+      <p>Human-centered, AI-powered service is the future. It demands new skills, responsible design, and innovation rooted in shared human values.</p>
+  
+      <h3>🧠 Reflection Prompt</h3>
+      <p>List 3 ways you receive or deliver a service daily. How might AI improve or complicate those interactions?</p>
+  
+      <h3>📚 Additional Resource</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/spohrer/" target="_blank">Jim Spohrer LinkedIn</a> – Connect to request the book.</li>
+        <li><a href="ISSIP Handbook.pdf" download>Download the ISSIP Handbook</a></li>
+      </ul>
     </div>
   </div>
-
   <!-- Module 2 -->
   <div class="page" id="module2">
     <div class="section">
@@ -109,3 +277,16 @@
 
 </body>
 </html>
+<script>
+  function showPage(id) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  function toggleConcept(btn) {
+    const content = btn.nextElementSibling;
+    const isVisible = content.style.display !== 'none';
+    content.style.display = isVisible ? 'none' : 'block';
+    btn.innerHTML = (isVisible ? '▶️' : '🔽') + ' ' + btn.innerHTML.slice(2);
+  }
+</script>
