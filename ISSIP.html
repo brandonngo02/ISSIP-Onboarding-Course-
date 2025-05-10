@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Innovation in the AI Era</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+    }
+
+    .navbar {
+      background-color: #1f2937;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar button {
+      background: none;
+      border: none;
+      color: white;
+      margin: 0 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .navbar button:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      display: none;
+      padding: 2rem;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h2 {
+      color: #1f2937;
+    }
+
+    .section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .section h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('pretest')">Pre-Test</button>
+    <button onclick="showPage('module1')">Module 1</button>
+    <button onclick="showPage('module2')">Module 2</button>
+    <button onclick="showPage('module3')">Module 3</button>
+    <button onclick="showPage('module4')">Module 4</button>
+    <button onclick="showPage('module5')">Module 5</button>
+    <button onclick="showPage('posttest')">Post-Test</button>
+  </div>
+
+  <!-- Home -->
+  <div class="page active" id="home">
+    <div class="section">
+      <h2>Welcome to the ISSIP Self-Paced Course</h2>
+      <p><strong>Title:</strong> Service Innovation in the AI Era</p>
+      <p>Explore how AI is transforming service systems using science, logic, and architecture perspectives.</p>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="https://issip.org" target="_blank">ISSIP Website</a></li>
+        <li><a href="https://www.youtube.com/@ISSIPorg" target="_blank">ISSIP YouTube</a></li>
+        <li><a href="https://www.amazon.com/Service-AI-Era-Architecture-Perspectives/dp/1637423039" target="_blank">Textbook on Amazon</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Pre-Test -->
+  <div class="page" id="pretest">
+    <div class="section">
+      <h2>🧠 Pre-Test</h2>
+      <p><strong>Time:</strong> 7 minutes</p>
+      <p><strong>Purpose:</strong> Assess baseline knowledge of AI in service.</p>
+      <p><strong>Link:</strong> [Insert pre-test form or link here]</p>
+    </div>
+  </div>
+
+  <!-- Module 1 -->
+  <div class="page" id="module1">
+    <div class="section">
+      <h2>📘 Module 1: Introduction to Service Innovation</h2>
+      <p><strong>Time:</strong> 5 minutes</p>
+      <p><strong>Learning Goals:</strong></p>
+      <ul>
+        <li>Understand the central role of service in business and society.</li>
+        <li>Frame AI's impact on service systems.</li>
+        <li>Introduce science, logic, and architecture lenses.</li>
+      </ul>
+      <h3>Reflection:</h3>
+      <p>“List 3 ways you receive or deliver a service daily. How might AI improve or complicate those interactions?”</p>
+    </div>
+  </div>
+
+  <!-- Module 2 -->
+  <div class="page" id="module2">
+    <div class="section">
+      <h2>🤖 Module 2: AI Foundations & Platform Society</h2>
+      <p><strong>Time:</strong> 15 minutes</p>
+      <ul>
+        <li>Automation vs Augmentation</li>
+        <li>Service robots & platforms: Siri, Uber, Amazon, Airbnb</li>
+        <li>Platform Society & Gig Economy</li>
+      </ul>
+      <p><strong>Case:</strong> How does a ride-sharing app use AI for automation & augmentation?</p>
+    </div>
+  </div>
+
+  <!-- Module 3 -->
+  <div class="page" id="module3">
+    <div class="section">
+      <h2>🔬 Module 3: Three Perspectives on Service</h2>
+      <h3>🧪 Science</h3>
+      <p>Service science = improving interaction in complex systems. Encourages T-shaped professionals.</p>
+      <h3>🧠 Logic</h3>
+      <p>Service-Dominant Logic = Co-creation of value between actors. Value is not delivered, but co-created.</p>
+      <h3>🏛️ Architecture</h3>
+      <p>Service-Dominant Architecture helps adapt organizations using science + logic principles.</p>
+    </div>
+  </div>
+
+  <!-- Module 4 -->
+  <div class="page" id="module4">
+    <div class="section">
+      <h2>🌐 Module 4: Communities, Human-Centered Design & Ethics</h2>
+      <p><strong>Time:</strong> 10 minutes</p>
+      <ul>
+        <li>Collaboration across disciplines (ISSIP)</li>
+        <li>Human-centered AI: trust, fairness, inclusion</li>
+        <li>Ethical AI: bias, privacy, responsibility</li>
+      </ul>
+      <p><strong>Prompt:</strong> What responsibilities do AI developers and users have?</p>
+    </div>
+  </div>
+
+  <!-- Module 5 -->
+  <div class="page" id="module5">
+    <div class="section">
+      <h2>🔮 Module 5: Future Challenges & Opportunities</h2>
+      <p><strong>Time:</strong> 10 minutes</p>
+      <ul>
+        <li>Designing a wiser, inclusive, sustainable future</li>
+        <li>Equity, well-being, and human-AI collaboration</li>
+        <li>Invest in platforms + people for trusted AI</li>
+      </ul>
+      <p><strong>Reflection:</strong> What does a “wiser world” look like to you?</p>
+    </div>
+  </div>
+
+  <!-- Post-Test -->
+  <div class="page" id="posttest">
+    <div class="section">
+      <h2>✅ Post-Test</h2>
+      <p><strong>Time:</strong> 10 minutes</p>
+      <p><strong>Purpose:</strong> Measure knowledge gains and retention.</p>
+      <p><strong>Link:</strong> [Insert post-test form or link here]</p>
+    </div>
+  </div>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
